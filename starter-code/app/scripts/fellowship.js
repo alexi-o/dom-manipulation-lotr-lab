@@ -39,9 +39,9 @@ function makeMiddleEarth() {
 makeMiddleEarth();
 
 // Part 2
+var hobbitList = document.createElement("ul");
 
 function makeHobbits() {
-    var hobbitList = document.createElement("ul");
     for (i = 0; i < hobbits.length; i++) {
       var hobbitsNames = document.createElement("li");
       hobbitsNames.innerHTML = hobbits[i];
@@ -76,6 +76,8 @@ function keepItSecretKeepItSafe() {
 
 // Part 4
 
+var rivendell = document.querySelectorAll("h1")[1];
+
 function makeBuddies() {
   var asideTag = document.createElement("aside");
   var buddyList = document.createElement("ul");
@@ -85,7 +87,6 @@ function makeBuddies() {
       buddyList.appendChild(buddyNames);
     }
   
-  var rivendell = document.querySelectorAll("h1")[1];
   asideTag.appendChild(buddyList);  
   rivendell.appendChild(asideTag);
   // create an aside tag
@@ -108,9 +109,10 @@ beautifulStranger();
 // Part 6
 
 function leaveTheShire() {
+  rivendell.appendChild(hobbitList);
   // assemble the hobbits and move them to Rivendell
 }
-
+leaveTheShire();
 
 // Part 7
 

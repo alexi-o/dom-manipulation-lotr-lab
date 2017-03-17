@@ -77,10 +77,11 @@ function keepItSecretKeepItSafe() {
 // Part 4
 
 var rivendell = document.querySelectorAll("h1")[1];
+var buddyList = document.createElement("ul");
 
 function makeBuddies() {
   var asideTag = document.createElement("aside");
-  var buddyList = document.createElement("ul");
+
     for (i = 0; i < buddies.length; i++) {
       var buddyNames = document.createElement('li');
       buddyNames.innerHTML = buddies[i];
@@ -93,21 +94,17 @@ function makeBuddies() {
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
 }
-
 makeBuddies();
 // Part 5
-
 
 function beautifulStranger() {
   var aragorn = document.querySelectorAll("li")[7];
   aragorn.innerHTML = "Aragorn";
   // change the 'Strider' textnode to 'Aragorn'
 }
-
 beautifulStranger();
 
 // Part 6
-
 function leaveTheShire() {
   rivendell.appendChild(hobbitList);
   // assemble the hobbits and move them to Rivendell
@@ -115,24 +112,37 @@ function leaveTheShire() {
 leaveTheShire();
 
 // Part 7
+var fellowship = document.createElement('div');
+  fellowship.appendChild(buddyList);
+  fellowship.appendChild(hobbitList);
+  rivendell.appendChild(fellowship);
 
+var forge = fellowship.querySelectorAll('li');
 
 function forgeTheFellowShip() {
+  for (var i=0; i<forge.length; i++){
+    alert((forge[i].innerText) + " has joined the fellowship!");
+ }
   // create a new div called 'the-fellowship' within rivendell
-  // add each hobbit and buddy one at a time to 'the-fellowship'
   // after each character is added make an alert that they have joined your party
+ 
+  // add each hobbit and buddy one at a time to 'the-fellowship'
 }
 
-
+forgeTheFellowShip();
 // Part 8
 
 
 function theBalrog() {
+  var gandalfWhite = document.querySelectorAll("li")[0];
+    gandalfWhite.innerHTML = "Gandalf the White";
+    gandalfWhite.style.background = "white";
+    gandalfWhite.style.border ="thick solid grey";
   // change the 'Gandalf' textNode to 'Gandalf the White'
   // apply style to the element
   // make the background 'white', add a grey border
 }
-
+theBalrog();
 
 // Part 9
 

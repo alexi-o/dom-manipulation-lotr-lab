@@ -76,7 +76,6 @@ function keepItSecretKeepItSafe() {
 
 // Part 4
 
-
 function makeBuddies() {
   var asideTag = document.createElement("aside");
   var buddyList = document.createElement("ul");
@@ -85,20 +84,26 @@ function makeBuddies() {
       buddyNames.innerHTML = buddies[i];
       buddyList.appendChild(buddyNames);
     }
-    var rivendell = document.
+  
+  var rivendell = document.querySelectorAll("h1")[1];
+  asideTag.appendChild(buddyList);  
+  rivendell.appendChild(asideTag);
   // create an aside tag
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
 }
 
-
+makeBuddies();
 // Part 5
 
 
 function beautifulStranger() {
+  var aragorn = document.querySelectorAll("li")[7];
+  aragorn.innerHTML = "Aragorn";
   // change the 'Strider' textnode to 'Aragorn'
 }
 
+beautifulStranger();
 
 // Part 6
 

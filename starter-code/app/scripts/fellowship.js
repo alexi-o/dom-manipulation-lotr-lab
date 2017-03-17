@@ -147,24 +147,38 @@ theBalrog();
 // Part 9
 
 function hornOfGondor() {
+  alert("The horn of Gondor has been blown!!");
+  var deadBean = document.querySelectorAll("li")[4];
+    deadBean.style.textDecoration = "line-through";
+    deadBean.remove();
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
   // put a linethrough on boromir's name
   // Remove Boromir from the Fellowship
 }
 
-
+hornOfGondor();
 // Part 10
+var mordor = document.querySelectorAll("h1")[2];
+var mountDoom = document.createElement('div');
+mountDoom.setAttribute("id", "mount-doom");
 
 function itsDangerousToGoAlone(){
+  var frodoModor = document.querySelectorAll("li")[4];
+  var samModor = document.querySelectorAll("li")[5];
+  mordor.appendChild(frodoModor);
+  mordor.appendChild(samModor);
   // take Frodo and Sam out of the fellowship and move them to Mordor
   // add a div with an id of 'mount-doom' to Mordor
 }
-
+itsDangerousToGoAlone();
 
 // Part 11
 
 function weWantsIt() {
+    var gollum = document.createElement('div');
+    mordor.appendChild(gollum);
+    gollum.appendChild(ringDiv);
   // Create a div with an id of 'gollum' and add it to Mordor
   // Remove the ring from Frodo and give it to Gollum
   // Move Gollum into Mount Doom
